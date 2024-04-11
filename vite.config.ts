@@ -5,7 +5,7 @@ import { VitePWA } from "vite-plugin-pwa";
 
 export default defineConfig({
   // depending on your application, base can also be "/"
-  base: "/Woody/",
+  base: "/Woody",
   plugins: [
     react({
       jsxImportSource: "@emotion/react",
@@ -14,7 +14,7 @@ export default defineConfig({
       },
     }),
     viteTsconfigPaths(),
-    VitePWA({ registerType: "autoUpdate" }),
+    // VitePWA({ registerType: "autoUpdate" }),
   ],
   server: {
     // this ensures that the browser opens upon server start

@@ -122,7 +122,7 @@ function AccountInfoCard({ data, title, rowStart, rowEnd }: any) {
             </span>
           </div>
           <span className="text-2xl font-bold text-cyan-700">
-            {((1000 * data.solved) / data.mistake).toFixed(2)}
+            {((100 * data.solved) / (data.mistake + data.solved)).toFixed(2)}%
           </span>
         </div>
       </div>
