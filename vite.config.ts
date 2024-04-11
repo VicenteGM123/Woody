@@ -13,8 +13,8 @@ export default defineConfig({
         plugins: ["@emotion/babel-plugin"],
       },
     }),
-    viteTsconfigPaths()
-    VitePWA({ registerType: 'autoUpdate' }),
+    viteTsconfigPaths(),
+    VitePWA({ registerType: "autoUpdate" }),
   ],
   server: {
     // this ensures that the browser opens upon server start
