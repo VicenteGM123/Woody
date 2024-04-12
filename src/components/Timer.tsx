@@ -9,6 +9,7 @@ const Timer = ({ updateTimeFunction }: TimerProps) => {
   const [hours, setHours] = useState(0);
   const [minutes, setMinutes] = useState(0);
   const [seconds, setSeconds] = useState(0);
+  const [lastTimeUpdate, setLastTimeUpdate] = useState(0);
   const intervalRef = useRef(-1);
   const intervalUpdateRef = useRef(-1);
 
@@ -42,6 +43,10 @@ const Timer = ({ updateTimeFunction }: TimerProps) => {
   }, [seconds, minutes]);
 
   const toggleTimer = () => {
+    const updateSeconds =
+      seconds + minutes * 60 + hours * 3600 - lastTimeUpdate;
+    setLastTimeUpdate(seconds + minutes * 60 + hours * 3600);
+    updateTimeFunction(updateSeconds);
     setIsRunning(!isRunning);
   };
 
