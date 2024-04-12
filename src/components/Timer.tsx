@@ -20,7 +20,7 @@ const Timer = ({ updateTimeFunction }: TimerProps) => {
       }, 1000);
       intervalUpdateRef.current = setInterval(() => {
         updateTimeFunction(60);
-        setLastTimeUpdate(seconds + minutes * 60 + hours * 3600);
+        setLastTimeUpdate(lastTimeUpdate + 60);
       }, 60000);
     } else {
       clearInterval(intervalRef.current);
