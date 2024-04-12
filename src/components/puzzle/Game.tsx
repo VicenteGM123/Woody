@@ -47,6 +47,13 @@ function Game({
       promotion: piece[1].toLowerCase() ?? "q",
     };
     if (piece[0] != chess.turn()) return false;
+    if (sourceSquare === targetSquare) return false;
+    const chessCopy = new Chess(chess.fen());
+    const result = makeAMove(chessCopy, moveData);
+    if (result === null) {
+      return false;
+    }
+
     const pieceMoved = chess.get(sourceSquare);
     const uciMove =
       `${sourceSquare}${targetSquare}` +
@@ -64,7 +71,7 @@ function Game({
       onIncorrectMove();
       return false;
     }
-    const moved = makeAMove(moveData);
+    const moved = makeAMove(chess, moveData);
     setFen(chess.fen());
     if (moved) {
       setMoveTry(moveTryStatus.Correct);
@@ -87,9 +94,9 @@ function Game({
   }
 
   const makeAMove = useCallback(
-    (moveData: any) => {
+    (chessInstance: Chess, moveData: any) => {
       try {
-        const result = chess.move(moveData);
+        const result = chessInstance.move(moveData);
         return result;
       } catch (e) {
         console.log(e);
