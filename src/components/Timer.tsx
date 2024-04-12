@@ -19,8 +19,8 @@ const Timer = ({ updateTimeFunction }: TimerProps) => {
         setSeconds((prevSeconds) => prevSeconds + 1);
       }, 1000);
       intervalUpdateRef.current = setInterval(() => {
-        setLastTimeUpdate(seconds + minutes * 60 + hours * 3600);
         updateTimeFunction(60);
+        setLastTimeUpdate(seconds + minutes * 60 + hours * 3600);
       }, 60000);
     } else {
       clearInterval(intervalRef.current);
