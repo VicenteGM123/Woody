@@ -13,7 +13,7 @@ root.render(
     domain="dev-ibyguk1ozpft24sk.us.auth0.com"
     clientId="YPcUkM9xo1ChyMl90eDvR56fI5PxL0W0"
     authorizationParams={{
-      redirect_uri: window.location.origin,
+      redirect_uri: "https://vicentegm123.github.io/Woody/",
     }}
   >
     <React.StrictMode>
