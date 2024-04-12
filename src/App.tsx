@@ -9,7 +9,7 @@ function App() {
   return (
     <HashRouter>
       <Routes>
-        <Route path="/" element={<Layout />}>
+        <Route path="" element={<Layout />}>
           <Route index element={<Home />} />
           <Route path="train" element={<Train />} />
         </Route>
