@@ -185,7 +185,7 @@
     "played_by": "",
     "turn": "white",
     "solution": ["f3g5", "h7h5", "g5h3"],
-    "alternatives": [[], [], ["f1e2"]],
+    "alternatives": [[], [], ["f1e2", "g5f3"]],
     "difficulty": "easy"
   },
   {
@@ -193,8 +193,8 @@
     "fen": "rnbqkb1r/pp1p2pp/2p2p2/4p3/2B5/2P2N2/PPP2PPP/R1BQ1RK1 w kq - 0 1",
     "played_by": "",
     "turn": "white",
-    "solution": ["f3e5", "d7d5", "d1h5", "g7g6", "e5g6", "h7g6", "f1e1"],
-    "alternatives": [[], [], ["f1e1"], [], [], [], ["h5h8"]],
+    "solution": ["f3e5", "d7d5", "d1h5", "g7g6", "e5g6", "h7g6", "h5h8"],
+    "alternatives": [[], [], ["f1e1"], [], [], [], ["f1e1", "h5g6"]],
     "difficulty": "easy"
   },
   {
@@ -232,18 +232,8 @@
     "fen": "8/1p3q1k/2p3pp/4P1r1/8/4Q3/PP5P/3R3K b - - 0 1",
     "played_by": "George A Thomas (2470) vs. Emanuel Lasker (2720), None",
     "turn": "black",
-    "solution": [
-      "g5e5",
-      "e3e5",
-      "f7f3",
-      "h1g1",
-      "f3d1",
-      "g1f2",
-      "d1d2",
-      "f2g3",
-      "d2d3"
-    ],
-    "alternatives": [[], [], [], [], [], [], ["d1d8"], [], []],
+    "solution": ["g5e5", "e3e5", "f7f3", "h1g1", "f3d1"],
+    "alternatives": [[], [], [], [], []],
     "difficulty": "easy"
   },
   {
@@ -296,8 +286,8 @@
     "fen": "4k3/1bp4r/p7/1p1P4/2P3pN/1P2r1P1/1BP2RPK/8 b - - 0 1",
     "played_by": "Jose Raul Capablanca (2725) vs. Edmundo Piazzini, None",
     "turn": "black",
-    "solution": ["b5c4"],
-    "alternatives": [["h7h4", "e3e4"]],
+    "solution": ["h7h4", "g3h4", "g4g3"],
+    "alternatives": [["b5c4", "e3e4"], "", ""],
     "difficulty": "easy"
   },
   {

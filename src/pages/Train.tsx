@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Game from "../components/puzzle/Game";
 import puzzlesRaw from "../assets/puzzles.json";
-import { moveTryStatus } from "../types";
+import { Puzzle, moveTryStatus } from "../types";
 import { useAuth0 } from "@auth0/auth0-react";
 import { GridLoader } from "react-spinners";
 import axios from "axios";
@@ -9,7 +9,7 @@ import PuzzleStatus from "../components/puzzle/PuzzleStatus";
 import PuzzleInfo from "../components/puzzle/PuzzleInfo";
 
 function Train() {
-  const [puzzles, setPuzzles] = useState(puzzlesRaw);
+  const [puzzles, setPuzzles] = useState<Puzzle[]>(puzzlesRaw as Puzzle[]);
   const [moveTry, setMoveTry] = useState(moveTryStatus.Initial);
   const { isAuthenticated, user, isLoading } = useAuth0();
   const [data, setData] = useState({
@@ -77,7 +77,7 @@ function Train() {
           const responseData = await response.json();
           setData({ ...responseData, getted: true });
           const completedPuzzles = responseData.solvedC + responseData.mistakeC;
-          setPuzzles(puzzlesRaw.slice(completedPuzzles));
+          setPuzzles(puzzlesRaw.slice(completedPuzzles) as Puzzle[]);
         } else {
           // Manejar el caso de error si es necesario
         }
