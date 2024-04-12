@@ -125,7 +125,7 @@ const Home = () => {
         </div>
         <div className="bg-slate-50 rounded shadow-md mb-3 p-5 lg:mb-2 lg:w-full">
           <h4 className="text-3xl font-semibold">
-            {((1000 * data.solvedG) / data.mistakeG).toFixed(2)}
+            {((100 * data.solvedG) / (data.mistakeG + data.solvedG)).toFixed(2)}
           </h4>
           <h3 className="text-lg">Precisión</h3>
         </div>
