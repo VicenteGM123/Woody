@@ -2,7 +2,7 @@
   "name": "woody",
   "version": "0.1.0",
   "homepage": "https://vicentegm123.github.io/Woody",
-  "private": true,
+  "private": false,
   "dependencies": {
     "@auth0/auth0-react": "^2.2.4",
     "@emotion/babel-plugin": "^11.11.0",
