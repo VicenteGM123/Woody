@@ -1607,18 +1607,8 @@
     "fen": "5rk1/ppr2Npp/2q1Pp2/3n4/8/6Q1/P5PP/3R1R1K w - - 0 1",
     "played_by": "Garry Kasparov (2790) vs. Matthias Wahls (2540), None",
     "turn": "white",
-    "solution": [
-      "f7h6",
-      "g8h8",
-      "h6f7",
-      "h8g8",
-      "d1d5",
-      "c6d5",
-      "g3c7",
-      "d5e6",
-      "f7d8"
-    ],
-    "alternatives": [["d1d5"], [], [], [], ["f7h6"], [], [], [], ["f7d6"]],
+    "solution": ["d1d5", "c6d5", "g3c7", "d5e6", "f7d8"],
+    "alternatives": [["f7h6"], [], [], [], ["f7d6"]],
     "difficulty": "easy"
   },
   {
@@ -1654,7 +1644,7 @@
     "played_by": "Ashot Anastasian (2602) vs. Alexander Khalifman (2500), None",
     "turn": "black",
     "solution": ["d7c5", "d4c5", "d8d3", "c5b6", "e6e5"],
-    "alternatives": [[], [], [], [], []],
+    "alternatives": [[], [], [], [], ["b4c3"]],
     "difficulty": "easy"
   },
   {
@@ -1753,7 +1743,7 @@
     "played_by": "Vladimir Kramnik (2772) vs. Levon Aronian (2786), None",
     "turn": "white",
     "solution": ["c4e5", "h8f8", "e5d7", "a8c8", "d7f6"],
-    "alternatives": [[], [], [], [], ["d5h5"]],
+    "alternatives": [[], [], [], [], ["d5h5", "d7b6", "a2a3", "d5b5"]],
     "difficulty": "easy"
   },
   {

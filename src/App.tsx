@@ -7,7 +7,7 @@ import Train from "./pages/Train";
 
 function App() {
   return (
-    <BrowserRouter basename="/Woody">
+    <BrowserRouter basename={import.meta.env.VITE_ROUTER_BASE}>
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
