@@ -26,11 +26,11 @@ jobs:
       - name: Build project
         run: yarn build
         env:
-          VITE_BASE_DIR: "/Woody/"
-          VITE_ROUTER_BASE=: "/Woody"
+          VITE_BASE_DIR: /Woody/
+          VITE_ROUTER_BASE=: /Woody
           VITE_AUTH0_DOMAIN=: ${{ secrets.VITE_AUTH0_DOMAIN }}
           VITE_AUTH0_CLIENTID: ${{ secrets.VITE_AUTH0_CLIENTID }}
-          VITE_AUTH0_REDIRECTURI: "/Woody/"
+          VITE_AUTH0_REDIRECTURI: /Woody/
 
       - name: Upload production-ready build files
         uses: actions/upload-artifact@v3
